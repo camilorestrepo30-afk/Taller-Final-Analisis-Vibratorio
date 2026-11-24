@@ -1,0 +1,20 @@
+\begin{tikzpicture}[font=\small]
+\pared{0}{-0.9}{0.9}
+\node[masa] (M) at (3.2,0) {$m$};
+\draw[spring,thick] (0,0.3) -- (M.west|-0,0.3) node[midway,above=3pt]{$k$};
+\amort{0,-0.3}{M.west|-0,-0.3}
+\node at (1.0,-0.8) {$c$};
+\draw[fuerza] (M.east) -- ++(1.0,0) node[right]{$F(t)$};
+\draw[thin] (3.2,0.55) -- (3.2,0.95);
+\draw[-{Stealth},thin] (3.2,0.85) -- (4.0,0.85) node[right]{$x$};
+\node[font=\small\bfseries] at (2.4,1.5) {(a) Modelo físico};
+\begin{scope}[xshift=8.6cm]
+\node[masa] (D) at (0,0) {$m$};
+\draw[fuerza] (D.west|-0,0.28) -- ++(-1.3,0) node[left]{$kx$};
+\draw[fuerza] (D.west|-0,-0.28) -- ++(-1.3,0) node[left]{$c\dot x$};
+\draw[fuerza] (D.east|-0,0.28) -- ++(1.3,0) node[right]{$F(t)$};
+\draw[inercial] (D.east|-0,-0.28) -- ++(1.3,0) node[right]{$-m\ddot x$};
+\draw[-{Stealth},thin] (-0.4,-0.95) -- (0.4,-0.95) node[right]{$+x$};
+\node[font=\small\bfseries] at (0,1.5) {(b) Diagrama de cuerpo libre};
+\end{scope}
+\end{tikzpicture}

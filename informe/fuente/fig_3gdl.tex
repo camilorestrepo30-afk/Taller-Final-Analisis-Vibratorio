@@ -1,0 +1,15 @@
+\begin{tikzpicture}[font=\small]
+\pared{0}{-0.9}{0.9}
+\paredR{11.2}{-0.9}{0.9}
+\foreach \i/\xp in {1/2.6,2/5.6,3/8.6}{ \node[masa] (M\i) at (\xp,0) {$m_\i$}; 
+  \draw[thin] (\xp,-0.95)--(\xp,-1.3); \draw[-{Stealth},thin] (\xp,-1.2)--++(0.7,0) node[right]{$x_\i$};}
+\draw[spring,thick] (0,0.3) -- (M1.west|-0,0.3) node[midway,above=3pt]{$k_1$};
+\amort{0,-0.3}{M1.west|-0,-0.3}
+\draw[spring,thick] (M1.east|-0,0.3) -- (M2.west|-0,0.3) node[midway,above=3pt]{$k_2$};
+\amort{M1.east|-0,-0.3}{M2.west|-0,-0.3}
+\draw[spring,thick] (M2.east|-0,0.3) -- (M3.west|-0,0.3) node[midway,above=3pt]{$k_3$};
+\amort{M2.east|-0,-0.3}{M3.west|-0,-0.3}
+\draw[spring,thick] (M3.east|-0,0.3) -- (11.2,0.3) node[midway,above=3pt]{$k_4$};
+\amort{M3.east|-0,-0.3}{11.2,-0.3}
+\node at (1.0,-0.75) {$c_1$}; \node at (4.1,-0.75) {$c_2$}; \node at (7.1,-0.75) {$c_3$}; \node at (10.1,-0.75) {$c_4$};
+\end{tikzpicture}

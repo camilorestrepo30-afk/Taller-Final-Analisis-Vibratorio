@@ -1,0 +1,24 @@
+\usepackage{tikz}
+\input{tikzdefs}
+\usepackage{float}
+\floatplacement{figure}{H}
+\usepackage{booktabs}
+\usepackage{caption}
+\captionsetup{font=small,labelfont=bf,labelsep=colon}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small Taller final -- Análisis de Ondas y Vibraciones}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\usepackage{titlesec}
+\titlespacing*{\section}{0pt}{2.2ex plus 1ex}{1.2ex}
+\titlespacing*{\subsection}{0pt}{1.8ex plus 1ex}{0.8ex}
+\usepackage{enumitem}
+\setlist{itemsep=1pt,topsep=3pt}
+\setlength{\parskip}{4pt}
+\usepackage{tcolorbox}
+\newtcolorbox{fenomeno}{before upper={\setlength{\parskip}{5pt}},colback=gray!6,colframe=gray!55,boxrule=0.5pt,arc=1mm,left=2mm,right=2mm,top=1mm,bottom=1mm}
+\newcommand{\figura}[4][0.92]{\begin{figure}[H]\centering\includegraphics[width=#1\linewidth]{#2}\caption{#3}\label{#4}\end{figure}}
+\AtBeginDocument{\renewcommand{\figurename}{Figura}\renewcommand{\tablename}{Tabla}\renewcommand{\contentsname}{Contenido}}
+\allowdisplaybreaks
